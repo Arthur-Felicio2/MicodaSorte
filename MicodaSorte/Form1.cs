@@ -33,6 +33,8 @@ namespace MicodaSorte
         void Update(int i)
         {
             tela[i].Text = roleta[i].ToString();
+            
+
         }
 
         private void btSpin_Click(object sender, EventArgs e)
@@ -74,6 +76,7 @@ namespace MicodaSorte
                     {
                         tela[i].ForeColor = Color.Red;
                     }
+
                     if (roleta[i] == 10)
                     {
                         roleta[i] = 0;
@@ -91,7 +94,31 @@ namespace MicodaSorte
                 tmrSpin.Enabled = false;
                 btSpin.Enabled = true;
             }
-            
+            if (roleta[0] == roleta[1] && roleta[0] == roleta[2])
+            {
+                label1.ForeColor = Color.Green;
+                label2.ForeColor = Color.Green;
+                label3.ForeColor = Color.Green;
+                txtBox.Text = "Você Venceu";
+            }
+            else
+            {
+                label1.ForeColor = Color.Red;
+                label2.ForeColor = Color.Red;
+                label3.ForeColor = Color.Red;
+                txtBox.Text = "Você Perdeu";
+            }
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

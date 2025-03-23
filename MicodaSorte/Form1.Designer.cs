@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tmrSpin = new System.Windows.Forms.Timer(this.components);
+            this.txtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btSpin
@@ -85,6 +86,14 @@
             // 
             this.tmrSpin.Tick += new System.EventHandler(this.tmrSpin_Tick);
             // 
+            // txtBox
+            // 
+            this.txtBox.Location = new System.Drawing.Point(561, 374);
+            this.txtBox.Name = "txtBox";
+            this.txtBox.Size = new System.Drawing.Size(170, 20);
+            this.txtBox.TabIndex = 4;
+            this.txtBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +101,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -99,6 +109,7 @@
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "MicoDaSorte";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +122,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer tmrSpin;
+        private System.Windows.Forms.TextBox txtBox;
     }
 }
 
